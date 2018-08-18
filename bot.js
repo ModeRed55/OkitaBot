@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "o!";
 
+//bot logs in
 client.on('ready', () => 
 {
 
@@ -9,6 +11,7 @@ client.on('ready', () =>
 
 });
 
+//example message
 client.on('message', message => {
 
     if (message.content === 'ping') {
@@ -19,6 +22,37 @@ client.on('message', message => {
 
 });
 
+
+//Array with sentences
+
+var meme = [
+    "Can't believe **Mode** runs like Naruto IRL",
+    "Can't believe **Pudding** stole money from his mom for MHW ",
+    "Can't believe **Don** is a plantfucker ",
+    "Can't believe **Overkill** is uncreative faggot",
+    "Can't believe **Armando** is transnigger"
+    "Can't believe **Aniki** waterboards himself"	
+];
+
+client.on("message", function(message)
+{
+    if(message.author.equals(client.user)) return;    
+    if(!message.content.startsWith(prefix)) return;
+var args = message.content.substring(prefix.length).split(" ");
+
+   switch(args[0].toLowerCase())
+   {
+        case "test":
+             var embed = new Discord.RichEmbed()
+            .addField("meme[Math.floor(Math.random() * meme.length)])
+            .setColor(0x00FFFF)
+            message.channel.sendEmbed(embed);
+            break; 
+   }
+	
+});
+
+//Someone starts sentence with Overkill
 client.on('message', message =>{
           if (message.content.startsWith('overkill')){
             message.channel.sendMessage('is my husband');
@@ -26,12 +60,15 @@ client.on('message', message =>{
           }
 });
 
+//when Bot is mentioned
 client.on('message', message=> {
     if (message.isMentioned(client.user)) {
     message.reply('What do you want cunt.');
 }
 });
 
+
+//new member
   client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'stables');
   channel.send(`Hello Faggot ${member}`);
