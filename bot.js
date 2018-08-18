@@ -34,23 +34,7 @@ var meme = [
     "Can't believe **Aniki** waterboards himself"	
 ];
 
-client.on("message", function(message)
-{
-    if(message.author.equals(client.user)) return;    
-    if(!message.content.startsWith(prefix)) return;
-var args = message.content.substring(prefix.length).split(" ");
 
-   switch(args[0].toLowerCase())
-   {
-        case "test":
-             var embed = new Discord.RichEmbed()
-            .addField("meme[Math.floor(Math.random() * meme.length)])
-            .setColor(0x00FFFF)
-            message.channel.sendEmbed(embed);
-            break; 
-   }
-	
-});
 
 //Someone starts sentence with Overkill
 client.on('message', message =>{
