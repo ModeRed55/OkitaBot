@@ -32,8 +32,7 @@ client.on('message', message=> {
 }
 });
 
-/ Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
+  client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'stables');
   channel.send(`Hello Faggot ${member}`);
 
