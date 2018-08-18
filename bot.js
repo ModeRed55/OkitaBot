@@ -34,24 +34,25 @@ var meme = [
     "Can't believe **Aniki** waterboards himself"	
 ];
 
-client.on("message", function(message)
-{
-    if(message.author.equals(client.user)) return;    
-    if(!message.content.startsWith(prefix)) return;
+//command
+client.on('message', function (message) {
+    if (message.author.bot) return;
+    // If a message doesn't start with your bot's prefix, don't bother going through the cases.
+    if (!message.content.startsWith(prefix)) return;
+    // Args length check. #1 is the command, #2 and higher are the arguments
     var args = message.content.substring(prefix.length).split(" ");
 
-    switch(args[0].toLowerCase())
-    {
-       
+    switch (args[0].toLowerCase()) {
         case "test":
-            message.channel.sendMessage(message.author.toString() meme[Math.floor(Math.random() * meme.length)]);
+            var response = meme [Math.floor(Math.random()*meme .length)];
+
+            message.channel.send(response).then().catch(console.error);
             break;
-        
         default:
-            
-            message.channel.sendMessage("**Command doesn't exist**");
+            break;
     }
 });
+
 
 
 //Someone starts sentence with Overkill
