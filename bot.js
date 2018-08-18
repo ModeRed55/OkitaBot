@@ -39,12 +39,13 @@ client.on("message", function(message)
 {
     if(message.author.equals(bot.user)) return;    
     if(!message.content.startsWith(prefix)) return;
-var args = message.content.substring(prefix.length).split(" ");
+   var args = message.content.substring(prefix.length).split(" ");
 	
 	switch(args[0].toLowerCase())
 		case "meme": 
 		message.channel.sendMessage(meme[Math.floor(Math.random() * meme.length)]);
                 break;
+		default: message.channel.sendMessage("**Command doesn't exist**");
 });
 
 
