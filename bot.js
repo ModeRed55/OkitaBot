@@ -34,6 +34,13 @@ var meme = [
     "Can't believe **Aniki** waterboards himself"	
 ];
 
+client.on("message", function(message)
+{
+    if(message.author.equals(bot.user)) return;    
+    if(!message.content.startsWith(prefix)) return;
+var args = message.content.substring(prefix.length).split(" ");
+});
+
 
 
 //Someone starts sentence with Overkill
