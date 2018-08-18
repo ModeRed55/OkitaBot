@@ -19,6 +19,25 @@ client.on('message', message => {
 
 });
 
+client.on('message', message =>{
+          if (message.content.startsWith('overkill')){
+            message.channel.sendMessage('is my husband');
+						message.react('😍')
+          }
+});
+
+client.on('message', message=> {
+    if (message.isMentioned(client.user)) {
+    message.reply('What do you want cunt.');
+}
+});
+
+/ Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('name', 'stables');
+  channel.send(`Hello Faggot ${member}`);
+
+});
  
 
 // THIS  MUST  BE  THIS  WAY
