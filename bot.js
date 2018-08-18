@@ -37,15 +37,21 @@ var meme = [
 //command
 client.on("message", function(message)
 {
-    if(message.author.equals(bot.user)) return;    
+    if(message.author.equals(client.user)) return;    
     if(!message.content.startsWith(prefix)) return;
-   var args = message.content.substring(prefix.length).split(" ");
-	
-	switch(args[0].toLowerCase())
-		case "meme": 
-		message.channel.sendMessage(meme[Math.floor(Math.random() * meme.length)]);
-                break;
-		default: message.channel.sendMessage("**Command doesn't exist**");
+    var args = message.content.substring(prefix.length).split(" ");
+
+    switch(args[0].toLowerCase())
+    {
+       
+        case "test":
+            message.channel.sendMessage(message.author.toString() meme[Math.floor(Math.random() * meme.length)]);
+            break;
+        
+        default:
+            
+            message.channel.sendMessage("**Command doesn't exist**");
+    }
 });
 
 
