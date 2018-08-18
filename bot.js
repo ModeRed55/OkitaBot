@@ -32,7 +32,8 @@ var meme = [
     "Can't believe **Don** is a plantfucker ",
     "Can't believe **Overkill** is uncreative faggot",
     "Can't believe **Armando** is transnigger",
-    "Can't believe **Aniki** waterboards himself"	
+    "Can't believe **Aniki** waterboards himself",
+    "Can't believe **Sayaka** has not posted :seductivejunior:"
 ];
 
 //command
