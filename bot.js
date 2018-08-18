@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "o!";
+
 
 //bot logs in
 client.on('ready', () => 
@@ -24,15 +24,6 @@ client.on('message', message => {
 
 
 //Array with sentences
-
-var meme = [
-    "Can't believe **Mode** runs like Naruto IRL",
-    "Can't believe **Pudding** stole money from his mom for MHW ",
-    "Can't believe **Don** is a plantfucker ",
-    "Can't believe **Overkill** is uncreative faggot",
-    "Can't believe **Armando** is transnigger"
-    "Can't believe **Aniki** waterboards himself"	
-];
 
 
 
