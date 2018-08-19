@@ -61,9 +61,10 @@ client.on('message', function (message) {
 
             message.channel.send(response).then().catch(console.error);
             break;
-        case "postthat"
+	case "postthat":
 		const junior = client.emojis.find("name", "seductive_junior");
-                 message.reply(`${junior}`);    
+                 message.reply(`${junior}`); 
+                 break;
 		    
         default:
             break;
@@ -82,7 +83,7 @@ client.on('message', message =>{
 });
 
 //someone says Okita
-if(message.content === "okita") {
+if(message.content === "okita" && message.content === "Okita ) {
    const okita = client.emojis.find("name", "okita_sick");
    message.reply(`${okita}`);
    message.react(':okita_happy:480870819757686785')
