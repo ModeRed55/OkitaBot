@@ -33,7 +33,13 @@ var meme = [
     "Can't believe **Overkill** is uncreative faggot",
     "Can't believe **Armando** is transnigger",
     "Can't believe **Aniki** waterboards himself",
-    "Can't believe **Sayaka** has not posted :seductivejunior:"
+    "Can't believe **Sayaka** has not posted :seductivejunior:",
+    "Can't believe **Armando** is a NAcuck"
+];
+
+var quote = [
+    "I do - DonDrone",
+    "i was in the bathroom... - Pudding"
 ];
 
 //command
@@ -50,8 +56,18 @@ client.on('message', function (message) {
 
             message.channel.send(response).then().catch(console.error);
             break;
+        case "quote":
+            var response = quote [Math.floor(Math.random()*quote .length)];
+
+            message.channel.send(response).then().catch(console.error);
+            break;
+        case "postthat"
+		const junior = client.emojis.find("name", "seductive_junior");
+                 message.reply(`${junior}`);    
+		    
         default:
             break;
+	
     }
 });
 
@@ -61,9 +77,16 @@ client.on('message', function (message) {
 client.on('message', message =>{
           if (message.content.startsWith('overkill')){
             message.channel.sendMessage('is my husband');
-						message.react('😍')
+	    message.react('😍')
           }
 });
+
+//someone says Okita
+if(message.content === "okita") {
+   const okita = client.emojis.find("name", "okita_sick");
+   message.reply(`${okita}`);
+   message.react(':okita_happy:480870819757686785')
+}
 
 //when Bot is mentioned
 client.on('message', message=> {
