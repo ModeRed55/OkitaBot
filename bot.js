@@ -57,16 +57,46 @@ const resultwar =["got murdered in a Master battle.",
                   "got defeated in battle and was killed.",
                   "won the Holy Grail War and married their Servant!",
                   "got ran over by a car and died.",
-                  "got killed by their own servant."];
+                  "got killed by their own servant.",
+                  "they handled Gilgamesh by themselves.",
+                  "they died to 32 Noble Phantasm.",
+                  "was evaporated by a sword beam and died.",
+                  "was raped to death by their servant.",
+                  "they died by getting nuked by an insta-NP from a break bar.",
+                  "they won the HGW and said their goodbyes.",
+                  "they won the HGW and they never saw their Servant again...",
+                  "got stabbed in the back by another master.",
+                  "got their heart ripped off by Zabanya",
+                  "got turned into a pig and eaten.",
+                  "got their eyes slashed off and then killed.",
+                  "pumped too much magical energy into his servant and died.",
+                  "died, but got revived by doctor Gil and won the HGW.",
+                  "decided to marry his servant instead and fled the HGW.",
+                  "died because he got wormed too hard.",
+                  "persisted on becoming a superhero and died.",
+                  "drowned in infinite rice",
+                  "fell into the grail mud and died"
+];
 
 const randomtextgrail =["Their low mana reserves reduced their Servant's stats by one rank!",
                         "Their very low mana reserves reduced their Servant's stats by two ranks!",
-                        "They used chicken's blood for the summoning circle.",
+                        "They used chicken blood for the summoning circle.",
                         "He used his semen to summon it.",
                         "They summoned it by accident!",
                         "They summoned it normally.",
-                        "They used spit to summon it."
+                        "They used spit to summon it.",
+                        "They summoned it with the help of crest worms."
                        ];
+
+const answerball= [
+                   "I agree.",
+                   "Maybe" ,
+                   "Umm... This is hard to say",
+                   "I'll give you Okita-san's seal of approval!",
+                   "No!",
+                   "Next week Master!",
+                   "COUGH!"
+];
 //% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck
 const ratefgo =[2, 10, 40];
 //servant IDS,basically the ID on a specific servant in cirnopedia, Incomplete
@@ -141,8 +171,28 @@ client.on('message', function (message) {
          .addField("Shinsengumi's first unit's captain, Okita Sōji arrives!",`${okitahelp}`)
          .addField("Commands", "`?believe` `?postthat` `?animestream` `?shittaste` `?selfie` `?grailwar` ")
          .setColor(0x00FFFF)
-     message.channel.sendEmbed(embed);
+         message.channel.sendEmbed(embed);
               break;
+        case "don":
+                    message.channel.send({
+                    files: ["https://fate-go.cirnopedia.org/icons/servant_card/2204.jpg"]
+                    });
+            break;
+        case "overkill":
+                         message.channel.send({
+                         files: ["http://i.imgur.com/hljYGCE.png"]
+                         });
+             break;
+        case "mode":
+                         message.channel.send({
+                         files: ["https://i.imgur.com/qFOJb7s.jpg"]
+                         });
+
+             break;
+        case "pudding":
+                        message.channel.send({
+                        files: ["https://i.imgur.com/S01Bqnp.jpg"]
+                        });       
         default:
             break;
     }
@@ -186,16 +236,25 @@ client.on('message', message =>
    .addField("Servant Summoned",`**${name}** has summoned a Servant! ${randomsummontext} `)
    .setImage(`https://fate-go.cirnopedia.org/icons/servant_card/${id}4.jpg`)
    .setThumbnail(`${message.author.avatarURL}`)
-   .addField("Result", `And in the end he ${finalresultwar} ${smugrin}`)
+   .addField("Result", `And in the end ${finalresultwar} ${smugrin}`)
    .setColor(0x00FFFF)
   message.channel.send(resultgrailwar);
 }});
 
-
+//answerball
+client.on('message', message =>
+{
+  if (message.author.bot) return;
+  if(message.content.startsWith('okitabot') && message.content.includes('?'))
+{
+      var answer = answerball [Math.floor(Math.random()*answerball .length)];
+      message.channel.send(answer);
+}
+});
 
 
 //Okita is someone's sentence
-client.on('message', message =>
+/*client.on('message', message =>
 {
   if (message.author.bot) return;
   if(message.content.includes('okita') || message.content.includes('Okita'))
@@ -203,7 +262,7 @@ client.on('message', message =>
       message.react("480911280400760837");
 }
 });
-
+*/
 //someone says night
 client.on('message', message =>
 {
@@ -216,19 +275,12 @@ client.on('message', message =>
 
 
 //Someone starts sentence with Overkill
-client.on('message', message =>
-{
-          if (message.content.startsWith('overkill'))
-          {
-            	message.react('😍')
-          }
-});
 
 
 //when Bot is mentioned
 client.on('message', message=> {
     if (message.isMentioned(client.user)) {
-    message.reply("I'm in good condition, Master. Yes, as good as ever!.");
+    message.reply("I'm in good condition, Master, yes, as good as ever!");
 }
 });
 
