@@ -42,11 +42,13 @@ var meme = [
     "Can't believe **Aniki** waterboards himself",
     "Can't believe **Pudding** is a griefer"
 ];
-var sleep =[
-  "480950640495820810",
-  "480950660548788224",
-  "480950679817551902"
-]
+const resultwar =["won", "lost" , "got raped but survived", "fucked his servant"];
+const ratefgo =[2, 6, 40];
+const servantid5 =["002", "008", "076", "060", "084", "085", "143", "065", "118", "037", "062", "113", "075", "052", "097", "059", "068" ,"142" ];
+const servantid4 =["006", "010", "101", "121", "011", "014", "018", "087", "146", "029", "030", "066", "094", "074", "100", "120", "145", "046", "041",
+"109", "159", "047", "048", "058", "082", "089", "116", "158"];
+const servantid3 =["007", "009", "072", "013", "015", "063", "095", "105", "125", "017", "020", "022", "064", "071", "023", "027", "028", "026", "042",
+"081", "110", "117", "124", "031", "079", "080", "035", "104", "049", "055", "056"];
 var okitapic =[
   "https://i.imgur.com/Cp7FkmT.jpg",
   "https://i.imgur.com/sFGQw1P.png",
@@ -100,7 +102,7 @@ client.on('message', function (message) {
         const okitahelp = client.emojis.find("name", "okita_yay");
         var embed = new Discord.RichEmbed()
          .addField("Shinsengumi's first unit's captain, Okita Sōji arrives!",`${okitahelp}`)
-         .addField("Commands", "`?believe` `?postthat` `?animestream` `?shittaste` `?selfie`  ")
+         .addField("Commands", "`?believe` `?postthat` `?animestream` `?shittaste` `?selfie` `?grailwar` ")
          .setColor(0x00FFFF)
      message.channel.sendEmbed(embed);
               break;
@@ -108,6 +110,47 @@ client.on('message', function (message) {
             break;
     }
 });
+
+client.on('message', message =>
+{
+  if (message.author.bot) return;
+  if(message.content === "?grailwar")
+  {
+
+  var chance = Math.random() * 100;
+  var rate = ratefgo;
+  var id = "0";
+  var name = message.author.username;
+  const smugrin = client.emojis.find("name", "smug_rin");
+  var finalresultwar = resultwar [Math.floor(Math.random()*resultwar .length)];
+  if (chance <= rate[0]) chance = "5";
+   else if (chance <= rate[1]) chance = "4";
+   else if (chance <= rate[2]) chance = "3";
+   else chance = "3";
+
+ if(chance === "3")
+ {
+   var id = servantid3 [Math.floor(Math.random()*servantid3 .length)];
+ }
+ if(chance === "4")
+ {
+   var id = servantid4 [Math.floor(Math.random()*servantid4 .length)];
+ }
+ if(chance === "5")
+ {
+   var id = servantid5 [Math.floor(Math.random()*servantid5 .length)];
+ }
+
+ var resultgrailwar = new Discord.RichEmbed()
+   .addField("Servant Summoned",`**${name}** has summoned a servant!,heh what a shit servant.${smugrin}`)
+   .setImage(`https://fate-go.cirnopedia.org/icons/servant_card/${id}4.jpg`)
+   .addField("Result", `And in the end he ${finalresultwar}.`)
+   .setColor(0x00FFFF)
+  message.channel.send(resultgrailwar);
+}});
+
+
+
 
 //someone says okita
 client.on('message', message =>
