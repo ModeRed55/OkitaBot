@@ -47,23 +47,25 @@ var meme = [
     "Can't believe **Overkill** is an uncreative faggot",
     "Can't believe **Armando** is transnigger",
     "Can't believe **Aniki** waterboards himself",
-    "Can't believe **Pudding** is a griefer"
+    "Can't believe **Pudding** is a griefer",
+    "Can't believe **Overkill** is making everyone wait AGAIN",
+    "Can't believe **Mode** is making everyone wait AGAIN"
 ];
 const resultwar =["got murdered in a Master battle.",
-                  "was first one to die, murdered by an Assassin-class.",
+                  "was the first one to die, murdered by an Assassin-class.",
                   "got defeated in battle but they survived.",
                   "got defeated in battle and was killed.",
                   "won the Holy Grail War and married their Servant!",
                   "got ran over by a car and died.",
-                  "got killed by his own servant."];
+                  "got killed by their own servant."];
 
-const randomtextgrail =["His low mana reserves reduced their Servant's stats by one rank!",
-                        "His very low mana reserves reduced their Servant's stats by two ranks!",
-                        "He used chicken's blood for the summoning circle.",
+const randomtextgrail =["Their low mana reserves reduced their Servant's stats by one rank!",
+                        "Their very low mana reserves reduced their Servant's stats by two ranks!",
+                        "They used chicken's blood for the summoning circle.",
                         "He used his semen to summon it.",
-                        "His servant got summoned by accident!",
-                        "He summoned it normally.",
-                        "he used spit to summon it."
+                        "They summoned it by accident!",
+                        "They summoned it normally.",
+                        "They used spit to summon it."
                        ];
 //% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck
 const ratefgo =[2, 10, 40];
@@ -180,7 +182,7 @@ client.on('message', message =>
  }
 
  var resultgrailwar = new Discord.RichEmbed()
-   .addField("Servant Summoned",`**${name}** has summoned a Servant!, ${randomsummontext} `)
+   .addField("Servant Summoned",`**${name}** has summoned a Servant! ${randomsummontext} `)
    .setImage(`https://fate-go.cirnopedia.org/icons/servant_card/${id}4.jpg`)
    .addField("Result", `And in the end he ${finalresultwar} ${smugrin}`)
    .setColor(0x00FFFF)
