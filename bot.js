@@ -7,7 +7,7 @@ client.on('ready', () =>
 {
 
     console.log('I am ready!');
-    client.user.setActivity("Daishouri");
+    client.user.setActivity("Master! use ?help");
 
 });
 
@@ -24,15 +24,37 @@ client.on('message', message => {
 
 
 //Array with sentences
-
+var relevant =[
+  "Pudding",
+  "Mode",
+  "Aniki",
+  "Overkill",
+  "Don",
+  "Armando",
+  "Sayaka"
+];
 var meme = [
     "Can't believe **Mode** runs like Naruto IRL",
     "Can't believe **Pudding** stole money from his mom for MHW ",
     "Can't believe **Don** is a plantfucker ",
-    "Can't believe **Overkill** is uncreative faggot",
+    "Can't believe **Overkill** is an uncreative faggot",
     "Can't believe **Armando** is transnigger",
-    "Can't believe **Aniki** waterboards himself"
+    "Can't believe **Aniki** waterboards himself",
+    "Can't believe **Pudding** is a griefer"
 ];
+var sleep =[
+  "480950640495820810",
+  "480950660548788224",
+  "480950679817551902"
+]
+var okitapic =[
+  "https://i.imgur.com/Cp7FkmT.jpg",
+  "https://i.imgur.com/sFGQw1P.png",
+  "https://i.imgur.com/onglIwt.jpg",
+  "https://i.imgur.com/agTpgUS.jpg",
+  "https://i.imgur.com/wMCqa91.jpg"
+];
+
 
 //command
 // The onMessage event handler
@@ -47,14 +69,35 @@ client.on('message', function (message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "test":
+        case "believe":
             var response = meme [Math.floor(Math.random()*meme .length)];
-
             message.channel.send(response).then().catch(console.error);
             break;
         case "postthat":
               const junior = client.emojis.find("name", "seductivejunior");
               message.channel.send(`${junior}`)
+              break;
+        case "animestream":
+              message.channel.send("https://www.twitch.tv/notanimestream");
+              break;
+        case "shittaste":
+              var response = relevant [Math.floor(Math.random()*relevant .length)];
+              const smugrin = client.emojis.find("name", "smug_rin");
+              message.channel.send(`Obviously the shittiest taste is from **${response}** ${smugrin}`).then().catch(console.error);
+              break;
+        case "selfie":
+              message.channel.send({
+              file: okitapic[Math.floor(Math.random() * okitapic.length)]
+              });
+              break;
+        case "help":
+        const okitahelp = client.emojis.find("name", "okita_yay");
+        var embed = new Discord.RichEmbed()
+         .addField("Shinsengumi's first unit's captain, Okita Sōji arrives!",`${okitahelp}`)
+         .addField("Commands", "`?believe` `?postthat` `?animestream` `?shittaste` `?selfie`  ")
+         .setColor(0x00FFFF)
+     message.channel.sendEmbed(embed);
+              break;
         default:
             break;
     }
@@ -76,7 +119,7 @@ client.on('message', message =>
 client.on('message', message =>
 {
   if (message.author.bot) return;
-  if(message.content.includes('night') || message.content.includes('sleep'))
+  if(message.content.includes('night') || message.content.includes('sleep') || message.content.includes('Night') || message.content.includes('Sleep'))
 {
        message.react("480910147699605539");
 }
@@ -108,6 +151,7 @@ client.on('message', message=> {
   channel.send(`Hello Faggot ${member}`);
 
 });
+
  
 
 // THIS  MUST  BE  THIS  WAY
