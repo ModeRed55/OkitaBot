@@ -2,13 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "?";
 
-
 //bot logs in
-client.on('ready', () => 
+client.on('ready', () =>
 {
 
     console.log('I am ready!');
-    client.user.setGame("Daishouri");
+    client.user.setActivity("Daishouri");
 
 });
 
@@ -32,21 +31,18 @@ var meme = [
     "Can't believe **Don** is a plantfucker ",
     "Can't believe **Overkill** is uncreative faggot",
     "Can't believe **Armando** is transnigger",
-    "Can't believe **Aniki** waterboards himself",
-    "Can't believe **Sayaka** has not posted :seductivejunior:",
-    "Can't believe **Armando** is a NAcuck"
-];
-
-var quote = [
-    "I do - DonDrone",
-    "i was in the bathroom... - Pudding"
+    "Can't believe **Aniki** waterboards himself"
 ];
 
 //command
+// The onMessage event handler
 client.on('message', function (message) {
+    // It is considered bad practice to let your bot react to other bots.
     if (message.author.bot) return;
+
     // If a message doesn't start with your bot's prefix, don't bother going through the cases.
     if (!message.content.startsWith(prefix)) return;
+
     // Args length check. #1 is the command, #2 and higher are the arguments
     var args = message.content.substring(prefix.length).split(" ");
 
@@ -56,38 +52,47 @@ client.on('message', function (message) {
 
             message.channel.send(response).then().catch(console.error);
             break;
-        case "quote":
-            var response = quote [Math.floor(Math.random()*quote .length)];
-
-            message.channel.send(response).then().catch(console.error);
-            break;
-	case "postthat":
-		const junior = client.emojis.find("name", "seductive_junior");
-                 message.reply(`${junior}`); 
-                 break;
-		    
+        case "postthat":
+              const junior = client.emojis.find("name", "seductivejunior");
+              message.channel.send(`${junior}`)
         default:
             break;
-	
     }
 });
 
+//someone says okita
+client.on('message', message =>
+{
+  if (message.author.bot) return;
+  if(message.content.includes('okita') || message.content.includes('Okita'))
+{
+       const okita = client.emojis.find("name", "okita_happy");
+       message.channel.send(`${okita}`);
+       message.react("480911280400760837");
+}
+});
+
+//someone says night
+client.on('message', message =>
+{
+  if (message.author.bot) return;
+  if(message.content.includes('night') || message.content.includes('sleep'))
+{
+       message.react("480910147699605539");
+}
+});
 
 
 //Someone starts sentence with Overkill
-client.on('message', message =>{
-          if (message.content.startsWith('overkill')){
-            message.channel.sendMessage('is my husband');
-	    message.react('😍')
+client.on('message', message =>
+{
+          if (message.content.startsWith('overkill'))
+          {
+            message.channel.send('is my husband');
+						message.react('😍')
           }
 });
 
-//someone says Okita
-if(message.content === "okita" && message.content === "Okita ) {
-   const okita = client.emojis.find("name", "okita_sick");
-   message.reply(`${okita}`);
-   message.react(':okita_happy:480870819757686785')
-}
 
 //when Bot is mentioned
 client.on('message', message=> {
