@@ -2,7 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "?";
 
-//bot logs in
+//welcome to my shitty code, things to do
+//fix the code so every command is a single archive!
+//random Commands
+//a IDLERPG game but fate related
+
+
+//bot logs in, only relevant when executing on console manually
 client.on('ready', () =>
 {
 
@@ -11,7 +17,7 @@ client.on('ready', () =>
 
 });
 
-//example message
+//example message for things
 client.on('message', message => {
 
     if (message.content === 'ping') {
@@ -33,6 +39,7 @@ var relevant =[
   "Armando",
   "Sayaka"
 ];
+//memes
 var meme = [
     "Can't believe **Mode** runs like Naruto IRL",
     "Can't believe **Pudding** stole money from his mom for MHW ",
@@ -42,13 +49,41 @@ var meme = [
     "Can't believe **Aniki** waterboards himself",
     "Can't believe **Pudding** is a griefer"
 ];
-const resultwar =["won", "lost" , "got raped but survived", "fucked his servant"];
-const ratefgo =[2, 6, 40];
-const servantid5 =["002", "008", "076", "060", "084", "085", "143", "065", "118", "037", "062", "113", "075", "052", "097", "059", "068" ,"142" ];
-const servantid4 =["006", "010", "101", "121", "011", "014", "018", "087", "146", "029", "030", "066", "094", "074", "100", "120", "145", "046", "041",
-"109", "159", "047", "048", "058", "082", "089", "116", "158"];
-const servantid3 =["007", "009", "072", "013", "015", "063", "095", "105", "125", "017", "020", "022", "064", "071", "023", "027", "028", "026", "042",
-"081", "110", "117", "124", "031", "079", "080", "035", "104", "049", "055", "056"];
+const resultwar =["got murdered in a Master battle.",
+                  "was first one to die, murdered by an Assassin-class.",
+                  "got defeated in battle but they survived.",
+                  "got defeated in battle and was killed.",
+                  "won the Holy Grail War and married their Servant!",
+                  "got ran over by a car and died.",
+                  "got killed by his own servant."];
+
+const randomtextgrail =["His low mana reserves reduced their Servant's stats by one rank!",
+                        "His very low mana reserves reduced their Servant's stats by two ranks!",
+                        "He used chicken's blood for the summoning circle.",
+                        "He used his semen to summon it.",
+                        "His servant got summoned by accident!",
+                        "He summoned it normally.",
+                        "he used spit to summon it."
+                       ];
+//% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck
+const ratefgo =[2, 10, 40];
+//servant IDS,basically the ID on a specific servant in cirnopedia, Incomplete
+const servantid5 =[ "002", "008", "012", "037", "051", "052", "059", "060", "062", "065", "068", "070", "075", "076", "077", "084", "085", "086", "088",
+                    "090", "091", "093", "096", "097", "098", "099", "106", "108", "112", "113", "114", "118", "119", "127", "128", "129", "136", "139",
+                    "142", "143", "144", "150", "153", "154", "155" ,"156", "160", "161", "163", "167", "169", "173", "175", "179", "189", "195", "196",
+                    "198", "199", "201", "205", "206", "209", "212", "213", "215", "216", "220"];
+
+const servantid4 =["003", "004", "005", "006", "010", "011", "014", "018", "029", "030", "041", "046", "047", "048", "058", "061", "066", "067", "069",
+                  "073", "074", "078", "082", "087", "089", "092", "094", "100", "101", "102", "103", "109", "111", "115", "116", "120", "122", "123",
+                  "130", "131", "132", "133", "135", "137", "138", "140", "141", "145", "146", "147", "157", "158", "159", "162", "164", "165", "166",
+                  "170", "171", "176", "177", "178", "180", "181", "182", "183", "184", "185", "187", "188", "190", "191", "192", "193", "194", "197",
+                   "200", "202", "207", "208", "211", "214", "217", "218", "219", "221", "222"];
+
+const servantid3 =["007", "009", "013", "015", "017", "020", "022", "023", "026", "027", "028", "031", "032", "035", "038", "042", "049", "055",
+                   "056", "063", "064", "071", "072", "079", "080", "081", "095", "104", "105", "110", "117", "124", "125", "126", "148", "172", "186",
+                   "203", "204", "210"];
+
+//okitapics! need to add more
 var okitapic =[
   "https://i.imgur.com/Cp7FkmT.jpg",
   "https://i.imgur.com/sFGQw1P.png",
@@ -111,22 +146,25 @@ client.on('message', function (message) {
     }
 });
 
+/*grailwar command
+basically a bunch of comparison between random numbers get you a random servant, the % is defined by ratefgo array
+*/
 client.on('message', message =>
 {
   if (message.author.bot) return;
   if(message.content === "?grailwar")
   {
-
   var chance = Math.random() * 100;
   var rate = ratefgo;
   var id = "0";
   var name = message.author.username;
   const smugrin = client.emojis.find("name", "smug_rin");
   var finalresultwar = resultwar [Math.floor(Math.random()*resultwar .length)];
+  var randomsummontext = randomtextgrail [Math.floor(Math.random()*randomtextgrail .length)];
   if (chance <= rate[0]) chance = "5";
-   else if (chance <= rate[1]) chance = "4";
-   else if (chance <= rate[2]) chance = "3";
-   else chance = "3";
+  else if (chance <= rate[1]) chance = "4";
+  else if (chance <= rate[2]) chance = "3";
+  else chance = "3";
 
  if(chance === "3")
  {
@@ -142,9 +180,9 @@ client.on('message', message =>
  }
 
  var resultgrailwar = new Discord.RichEmbed()
-   .addField("Servant Summoned",`**${name}** has summoned a servant!,heh what a shit servant.${smugrin}`)
+   .addField("Servant Summoned",`**${name}** has summoned a Servant!, ${randomsummontext} `)
    .setImage(`https://fate-go.cirnopedia.org/icons/servant_card/${id}4.jpg`)
-   .addField("Result", `And in the end he ${finalresultwar}.`)
+   .addField("Result", `And in the end he ${finalresultwar} ${smugrin}`)
    .setColor(0x00FFFF)
   message.channel.send(resultgrailwar);
 }});
@@ -152,15 +190,13 @@ client.on('message', message =>
 
 
 
-//someone says okita
+//Okita is someone's sentence
 client.on('message', message =>
 {
   if (message.author.bot) return;
   if(message.content.includes('okita') || message.content.includes('Okita'))
 {
-       const okita = client.emojis.find("name", "okita_happy");
-       message.channel.send(`${okita}`);
-       message.react("480911280400760837");
+      message.react("480911280400760837");
 }
 });
 
@@ -188,7 +224,7 @@ client.on('message', message =>
 //when Bot is mentioned
 client.on('message', message=> {
     if (message.isMentioned(client.user)) {
-    message.reply('What do you want cunt.');
+    message.reply("I'm in good condition, Master. Yes, as good as ever!.");
 }
 });
 
@@ -196,7 +232,7 @@ client.on('message', message=> {
 //new member
   client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'stables');
-  channel.send(`Hello Faggot ${member}`);
+  channel.send(`Welcome to the Shinsengumi Police Station~! ${member}`);
 
 });
 
