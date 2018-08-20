@@ -79,6 +79,7 @@ client.on('message', function (message) {
               break;
         case "animestream":
               message.channel.send("https://www.twitch.tv/notanimestream");
+              message.channel.send("Currently on List : To Aru Majutsu No Index S1")
               break;
         case "shittaste":
               var response = relevant [Math.floor(Math.random()*relevant .length)];
@@ -88,6 +89,11 @@ client.on('message', function (message) {
         case "selfie":
               message.channel.send({
               file: okitapic[Math.floor(Math.random() * okitapic.length)]
+              });
+              break;
+        case "dab":
+              message.channel.send({
+              files: ["https://i.imgur.com/vDTIHTL.png"]
               });
               break;
         case "help":
@@ -131,8 +137,7 @@ client.on('message', message =>
 {
           if (message.content.startsWith('overkill'))
           {
-            message.channel.send('is my husband');
-						message.react('😍')
+            	message.react('😍')
           }
 });
 
@@ -151,6 +156,7 @@ client.on('message', message=> {
   channel.send(`Hello Faggot ${member}`);
 
 });
+
 
  
 
