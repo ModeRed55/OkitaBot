@@ -160,6 +160,7 @@ client.on('message', message =>
   var rate = ratefgo;
   var id = "0";
   var name = message.author.username;
+  var useravatar = message.author.avatarURL
   const smugrin = client.emojis.find("name", "smug_rin");
   var finalresultwar = resultwar [Math.floor(Math.random()*resultwar .length)];
   var randomsummontext = randomtextgrail [Math.floor(Math.random()*randomtextgrail .length)];
@@ -184,6 +185,7 @@ client.on('message', message =>
  var resultgrailwar = new Discord.RichEmbed()
    .addField("Servant Summoned",`**${name}** has summoned a Servant! ${randomsummontext} `)
    .setImage(`https://fate-go.cirnopedia.org/icons/servant_card/${id}4.jpg`)
+   .setThumbnail(`${message.author.avatarURL}`)
    .addField("Result", `And in the end he ${finalresultwar} ${smugrin}`)
    .setColor(0x00FFFF)
   message.channel.send(resultgrailwar);
