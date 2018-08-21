@@ -4,7 +4,6 @@ const prefix = "?";
 const talkedRecently = new Set();
 const command =new Set();
 /*
-OkitaBot7.0
 welcome to my shitty code, things to do:
 -fix the code, make every single command a single js archive, see nobubot for examples
 -more fun commands!
@@ -47,20 +46,19 @@ var relevant =[
   "KoO"
 ];
 //circlejerk memes
-var meme =[
-    "Can't believe **Mode** runs like Naruto IRL",
-    "Can't believe **Pudding** stole money from his mom for MHW ",
-    "Can't believe **Don** is a plantfucker ",
-    "Can't believe **Overkill** is an uncreative faggot",
-    "Can't believe **Armando** is transnigger",
-    "Can't believe **Aniki** waterboards himself",
-    "Can't believe **Pudding** is a griefer",
-    "Can't believe **Overkill** is making everyone wait AGAIN",
-    "Can't believe **Mode** is making everyone wait AGAIN"
+var meme = [
+    "Can't believe **Mode** runs like Naruto IRL.",
+    "Can't believe **Pudding** stole money from his mom for MHW.",
+    "Can't believe **Don** is a plantfucker.",
+    "Can't believe **Overkill** is an uncreative faggot.",
+    "Can't believe **Armando** is transnigger.",
+    "Can't believe **Aniki** waterboards himself.",
+    "Can't believe **Pudding** is a griefer.",
+    "Can't believe **Overkill** is making everyone wait AGAIN.",
+    "Can't believe **Mode** is making everyone wait AGAIN."
 ];
 //random text on the result of grailwar command
-const resultwar =[
-                  "got murdered in a Master battle.",
+const resultwar =["got murdered in a Master battle.",
                   "was the first one to die, murdered by an Assassin-class.",
                   "got defeated in battle but they survived.",
                   "got defeated in battle and was killed.",
@@ -103,45 +101,43 @@ const randomtextgrail =[
                         "They summoned their servant with a human sacrifice"
                        ];
 //possible answers whe asking a question to okitabot
-const answerball =[
+const answerball= [
                    "I agree.",
                    "Maybe" ,
                    "Umm... This is hard to say",
                    "I'll give you Okita-san's seal of approval!",
                    "No!",
                    "COUGH!"
-                  ];
+];
 //% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck
 const ratefgo =[2, 10, 40];
 //servant IDS,basically the ID on a specific servant in Cirnopedia
 //Cirnopedia ID for 5* servants
-const servantid5 =["002", "008", "012", "037", "051", "052", "059", "060", "062", "065", "068", "070", "075", "076", "077", "084", "085", "086", "088",
+const servantid5 =[ "002", "008", "012", "037", "051", "052", "059", "060", "062", "065", "068", "070", "075", "076", "077", "084", "085", "086", "088",
                     "090", "091", "093", "096", "097", "098", "099", "106", "108", "112", "113", "114", "118", "119", "127", "128", "129", "136", "139",
                     "142", "143", "144", "150", "153", "154", "155" ,"156", "160", "161", "163", "167", "169", "173", "175", "179", "189", "195", "196",
-                    "198", "199", "201", "205", "206", "209", "212", "213", "215", "216", "220"
-                  ];
+                    "198", "199", "201", "205", "206", "209", "212", "213", "215", "216", "220"];
 //Cirnopedia ID for 4* servants
 const servantid4 =["003", "004", "005", "006", "010", "011", "014", "018", "029", "030", "041", "046", "047", "048", "058", "061", "066", "067", "069",
                   "073", "074", "078", "082", "087", "089", "092", "094", "100", "101", "102", "103", "109", "111", "115", "116", "120", "122", "123",
                   "130", "131", "132", "133", "135", "137", "138", "140", "141", "145", "146", "147", "157", "158", "159", "162", "164", "165", "166",
                   "170", "171", "176", "177", "178", "180", "181", "182", "183", "184", "185", "187", "188", "190", "191", "192", "193", "194", "197",
-                   "200", "202", "207", "208", "211", "214", "217", "218", "219", "221", "222"
-                  ];
+                   "200", "202", "207", "208", "211", "214", "217", "218", "219", "221", "222"];
 //Cirnopedia ID for 3* servants
 const servantid3 =["007", "009", "013", "015", "017", "020", "022", "023", "026", "027", "028", "031", "032", "035", "038", "042", "049", "055",
                    "056", "063", "064", "071", "072", "079", "080", "081", "095", "104", "105", "110", "117", "124", "125", "126", "148", "172", "186",
-                   "203", "204", "210"
-                  ];
+                   "203", "204", "210"];
 
 //random words to make random names for NP command
 const randomnpname =["Niggers", "Destroyer", "Enuma", "Cuck",  "BTFO",  "Epic",  "AIDS", "Faggot",  "Tranquilizer",  "Le",  "Dab",  "Ultra", "Rape",  "Toaster",
                      "Melt",  "Water",  "Thunder",  "Overload",  "Brave",  "Divine ", "Figure",  "Wheel",  "Destruction", "Frog", "Funny", "Clown", "Six" ,"Stella",
-                     "Jets", "Wrong"
-                    ];
+                     "Jets", "Wrong"];
 //type of NP
-const nptype =["Anti Unit", "Anti Army",  "Anti World",];
+const nptype =["Anti-Unit", "Anti-Army",  "Anti-World", "Anti-Fortress", "Anti-Divine", "Anti-Demon", "Anti-Country", "Anti-Planet", "Anti-Humanity", "Barrier", "Fortress", "Suicide"];
 //damage of NP
 const npdamage =["500%", "1000%", "300%", "600%", "1200%"];
+const nprank =["EX", "A++", "A+", "A", "A-", "B+++", "B++", "B+", "B", "B-", "C+++", "C++", "C+", "C", "C-", "D+", "D", "D-",
+               "E", "E-", "?"];
 //for now only used on command NP, can be used in other commands later
 const fgocards =["Quick", "Buster" ,"Arts"];
 
@@ -311,11 +307,14 @@ client.on('message', message =>
     var typenp =  nptype [Math.floor(Math.random()*nptype .length)];
     var damagenp = npdamage [Math.floor(Math.random()*npdamage .length)];
     var cardtype = fgocards [Math.floor(Math.random()*fgocards .length)];
-
+    var ranknp = nprank [Math.floor(Math.random()*nprank .length)];
     var resultnp = new Discord.RichEmbed()
     .addField("Your Noble Phantasm",`**${name}** your Noble Phantasm is **${npname1} of ${npname2}** `)
     .setThumbnail(`${message.author.avatarURL}`)
-    .addField("Stats", `**${typenp}     ${damagenp}    ${cardtype}**`)
+    .addField("Classification", `**${typenp}**`)
+    .addField("Type",  `**${cardtype}**`)
+    .addField("Damage", `**${damagenp}**`)
+    .addField("Rank", `**${ranknp}**`)
     .setColor(0x00FFFF)
     message.channel.send(resultnp);
   }
@@ -383,8 +382,6 @@ client.on('message', message=> {
   const channel = member.guild.channels.find('name', 'stables');
   channel.send(`Welcome to the Shinsengumi Police Station~! ${member}`);
 });
-
-
  
 
 // THIS  MUST  BE  THIS  WAY
