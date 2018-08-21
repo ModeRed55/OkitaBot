@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "?";
-const talkedRecently = new Set();
-const command =new Set();
+const cooldownNP = new Set();
+const cooldownGrail =new Set();
+
 /*
 welcome to my shitty code, things to do:
 -fix the code, make every single command a single js archive, see nobubot for examples
@@ -129,9 +130,9 @@ const servantid3 =["007", "009", "013", "015", "017", "020", "022", "023", "026"
                    "203", "204", "210"];
 
 //random words to make random names for NP command
-const randomnpname =["Niggers", "Destroyer", "Enuma", "Cuck",  "BTFO",  "Epic",  "AIDS", "Faggot",  "Tranquilizer",  "Le",  "Dab",  "Ultra", "Rape",  "Toaster",
+const randomnpname =["Excalibur", "Destroyer", "Enuma", "Cuck",  "BTFO",  "Epic",  "AIDS", "Faggot",  "Tranquilizer",  "Le",  "Dab",  "Ultra", "Rape",  "Toaster",
                      "Melt",  "Water",  "Thunder",  "Overload",  "Brave",  "Divine ", "Figure",  "Wheel",  "Destruction", "Frog", "Funny", "Clown", "Six" ,"Stella",
-                     "Jets", "Wrong"];
+                     "Jets", "Wrong", "Explotion", "Disgusting", "Monster", "Hunter", "Wolrd", "Earth" ,"Sick", "Meme", "Killer", "Kill", "Genocide", "Hug", "Nazi"];
 //type of NP
 const nptype =["Anti-Unit", "Anti-Army",  "Anti-World", "Anti-Fortress", "Anti-Divine", "Anti-Demon", "Anti-Country", "Anti-Planet", "Anti-Humanity", "Barrier", "Fortress", "Suicide"];
 //damage of NP
@@ -212,7 +213,7 @@ var okitapic =[
 
         case "overkill":
                                message.channel.send({
-                               files: ["https://i.imgur.com/uvTsKfT.png"]
+                               files: ["http://i.imgur.com/hljYGCE.png"]
                                });
                    break;
 
@@ -237,10 +238,11 @@ basically a bunch of comparison between random numbers get you a random servant,
 */
 client.on('message', message =>
 {
+
   if (message.author.bot) return;
-  if(message.content === `${prefix}grailwar`)
+    if(message.content === `${prefix}grailwar`)
     {
-      if (talkedRecently.has(message.author.id)&&command.has(`${prefix}grailwar`))
+      if (cooldownGrail.has(message.author.id))
       {
         message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for  some dango? ")
       }
@@ -281,11 +283,10 @@ client.on('message', message =>
             .setColor(0x00FFFF)
             message.channel.send(resultgrailwar);
       }
-           talkedRecently.add(message.author.id);
-           command.add(`${prefix}grailwar`)
-           setTimeout(() => {talkedRecently.delete(message.author.id);}, 300000);
-           setTimeout(() => {command.delete(`${prefix}grailwar`);}, 300000);
-  }
+           cooldownGrail.add(message.author.id);
+           setTimeout(() => {cooldownGrail.delete(message.author.id);}, 300000);
+   }
+
 });
 
 //Take random words from array to make a random NP!
@@ -294,7 +295,7 @@ client.on('message', message =>
   if (message.author.bot) return;
   if(message.content === `${prefix}mynp`)
   {
-    if (talkedRecently.has(message.author.id)&&command.has(`${prefix}mynp`))
+    if (cooldownNP.has(message.author.id))
     {
       message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for  some dango? ")
     }
@@ -309,7 +310,7 @@ client.on('message', message =>
     var cardtype = fgocards [Math.floor(Math.random()*fgocards .length)];
     var ranknp = nprank [Math.floor(Math.random()*nprank .length)];
     var resultnp = new Discord.RichEmbed()
-    .addField("Your Noble Phantasm",`**${name}** your Noble Phantasm is **${npname1} of ${npname2}** `)
+    .addField("Your Noble Phantasm",`**${name}** your Noble Phantasm is **${npname1} ${npname2}** `)
     .setThumbnail(`${message.author.avatarURL}`)
     .addField("Classification", `**${typenp}**`)
     .addField("Type",  `**${cardtype}**`)
@@ -318,11 +319,9 @@ client.on('message', message =>
     .setColor(0x00FFFF)
     message.channel.send(resultnp);
   }
-  talkedRecently.add(message.author.id);
-  command.add(`${prefix}mynp`)
-  setTimeout(() => {talkedRecently.delete(message.author.id);}, 300000);
-  setTimeout(() => {command.delete(`${prefix}mynp`);}, 300000);
-}
+  cooldownNP.add(message.author.id);
+  setTimeout(() => {cooldownNP.delete(message.author.id);}, 300000);
+  }
 });
 
 //8ball,answers only if sentences starts with okitabot and includes a ?
@@ -382,6 +381,7 @@ client.on('message', message=> {
   const channel = member.guild.channels.find('name', 'stables');
   channel.send(`Welcome to the Shinsengumi Police Station~! ${member}`);
 });
+
  
 
 // THIS  MUST  BE  THIS  WAY
