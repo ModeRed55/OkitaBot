@@ -212,7 +212,7 @@ var okitapic =[
 
         case "overkill":
                                message.channel.send({
-                               files: ["http://i.imgur.com/hljYGCE.png"]
+                               files: ["https://i.imgur.com/uvTsKfT.png"]
                                });
                    break;
 
