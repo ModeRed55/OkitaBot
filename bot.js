@@ -206,7 +206,7 @@ var okitapic =[
 
         case "don":
                           message.channel.send({
-                          files: ["https://i.imgur.com/J9SDkMO.jpg"]
+                          files: ["https://i.imgur.com/Uh0jIf5.png"]
                           });
                   break;
 
@@ -218,13 +218,13 @@ var okitapic =[
 
         case "mode":
                           message.channel.send({
-                          files: ["https://i.imgur.com/qFOJb7s.jpg"]
+                          files: ["https://i.imgur.com/lhfncXf.png"]
                           });
               break;
 
         case "pudding":
                               message.channel.send({
-                              files: ["https://i.imgur.com/S01Bqnp.jpg"]
+                              files: ["https://i.imgur.com/P09qWTe.png"]
                               });
               break;
       default:
