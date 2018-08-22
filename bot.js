@@ -133,7 +133,7 @@ const servantid3 =["007", "009", "013", "015", "017", "020", "022", "023", "026"
 //random words to make random names for NP command
 const randomnpname =["Excalibur", "Destroyer", "Enuma", "Cuck",  "BTFO",  "Epic",  "AIDS", "Faggot",  "Tranquilizer",  "Le",  "Dab",  "Ultra", "Rape",  "Toaster",
                      "Melt",  "Water",  "Thunder",  "Overload",  "Brave",  "Divine ", "Figure",  "Wheel",  "Destruction", "Frog", "Funny", "Clown", "Six" ,"Stella",
-                     "Jets", "Wrong", "Explotion", "Disgusting", "Monster", "Hunter", "Wolrd", "Earth" ,"Sick", "Meme", "Killer", "Kill", "Genocide", "Hug", "Nazi"];
+                     "Jets", "Wrong", "Explotion", "Disgusting", "Monster", "Hunter", "World", "Earth" ,"Sick", "Meme", "Killer", "Kill", "Genocide", "Hug", "Nazi"];
 //type of NP
 const nptype =["Anti-Unit", "Anti-Army",  "Anti-World", "Anti-Fortress", "Anti-Divine", "Anti-Demon", "Anti-Country", "Anti-Planet", "Anti-Humanity", "Barrier", "Fortress", "Suicide"];
 //damage of NP
