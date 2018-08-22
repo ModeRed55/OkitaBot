@@ -1,2 +1,2 @@
-# OkitaBot
+# OkitaBOT
 A shitposting bot
