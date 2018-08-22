@@ -245,7 +245,7 @@ client.on('message', message =>
     {
       if (cooldownGrail.has(message.author.id))
       {
-        message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for  some dango? ")
+        message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for some dango? ")
       }
       else
       {
@@ -298,7 +298,7 @@ client.on('message', message =>
   {
     if (cooldownNP.has(message.author.id))
     {
-      message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for  some dango? ")
+      message.channel.send("Master! you can only send this command every 5 minutes,why don't you join me for some dango? ")
     }
     else
     {
@@ -372,7 +372,7 @@ client.on('message', message =>
 client.on('message', message=> {
     if (message.isMentioned(client.user))
     {
-    message.reply("I'm in good condition, Master, yes, as good as ever!");
+    message.reply(" I'm in good condition, Master, yes, as good as ever!");
     }
 });
 
