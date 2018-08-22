@@ -5,6 +5,7 @@ const cooldownNP = new Set();
 const cooldownGrail =new Set();
 
 /*
+OkitaBOT8.0
 welcome to my shitty code, things to do:
 -fix the code, make every single command a single js archive, see nobubot for examples
 -more fun commands!
