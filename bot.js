@@ -8,13 +8,13 @@ const cooldownGrail =new Set();
 OkitaBOT8.0
 welcome to my shitty code, things to do:
 -fix the code, make every single command a single js archive, see nobubot for examples
--more fun commands!
+-more fun(shitposting) commands
 -steal nobubot gacha
--Powerlevel scouter but for fgocards
+-Powerlevel scouter but fgo related
 -love command because why not :saber_heart:
 -best girl command, could add pics or names
 -a IDLERPG game but fate related
-for any doubt ask me!(overkill) don't forget to make backups!
+don't forget to make backups!
 */
 
 //bot logs in, only relevant while starting bot with console,ask for more details if you want to try
