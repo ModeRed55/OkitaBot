@@ -109,10 +109,13 @@ const randomtextgrail =[
 const answerball= [
                    "Yes!.",
                    "Maybe." ,
-                   "Umm... This is hard to say",
+                   "Umm... This is hard to say.",
                    "I'll give you Okita-san's seal of approval!",
                    "No!",
-                   "COUGH!"
+                   "That's ri-..COUGH!",
+                   "I don't think s-..COUGH!,
+                   "Please repeat the question master...",
+                   "I think is unlikely master.."
 ];
 //% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck,not sure what the rates are tbh 
 const ratefgo =[2, 10, 40];
