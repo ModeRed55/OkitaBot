@@ -113,7 +113,7 @@ const answerball= [
                    "I'll give you Okita-san's seal of approval!",
                    "No!",
                    "That's ri-..COUGH!",
-                   "I don't think s-..COUGH!,
+                   "I don't think s-..COUGH!",
                    "Please repeat the question master...",
                    "I think is unlikely master.."
 ];
