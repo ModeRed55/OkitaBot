@@ -160,7 +160,7 @@ var okitapic =[
     "https://i.imgur.com/PGjUB8I.jpg",
     "https://i.imgur.com/43Nceww.png",
     "https://i.imgur.com/xPJYqH3.jpg",
-    "https://i.imgur.com/wnamXOl.png,
+    "https://i.imgur.com/wnamXOl.png",
     "https://i.imgur.com/zwrQbpu.jpg",
     "https://i.imgur.com/OGZ26Ai.jpg",
     "https://i.imgur.com/NJUkaZO.png",
