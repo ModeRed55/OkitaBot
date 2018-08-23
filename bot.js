@@ -75,7 +75,7 @@ const resultwar =["got murdered in a Master battle.",
                   "they won the HGW and said their goodbyes.",
                   "they won the HGW and they never saw their Servant again...",
                   "got stabbed in the back by another master.",
-                  "got their heart ripped off by Zabanya",
+                  "got their heart ripped off by Zabaniya",
                   "got turned into a pig and eaten.",
                   "got their eyes slashed off and then killed.",
                   "pumped too much magical energy into his servant and died.",
@@ -99,8 +99,8 @@ const randomtextgrail =[
                         "They summoned it normally.",
                         "They used spit to summon it.",
                         "They summoned it with the help of crest worms.",
-                        "They summoned their servant with Madness Enhancement",
-                        "They summoned their servant with a human sacrifice"
+                        "They summoned their Servant with Madness Enhancement.",
+                        "They summoned their Servant with a human sacrifice."
                        ];
 //possible answers whe asking a question to okitabot
 const answerball= [
