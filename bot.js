@@ -57,7 +57,10 @@ var meme = [
     "Can't believe **Aniki** waterboards himself.",
     "Can't believe **Pudding** is a griefer.",
     "Can't believe **Overkill** is making everyone wait AGAIN.",
-    "Can't believe **Mode** is making everyone wait AGAIN."
+    "Can't believe **Mode** is making everyone wait AGAIN.",
+    "Can't believe the **Healslut** is actually just a slut.",
+    "Can't believe **Aniki**'s waifu is a trashcan.",
+    "Can't believe **Mode** keeps dying."
 ];
 //random text on the result of grailwar command
 const resultwar =["got murdered in a Master battle.",
