@@ -152,11 +152,20 @@ const fgocards =["Quick", "Buster" ,"Arts"];
 
 //okitapics! need to add more
 var okitapic =[
-  "https://i.imgur.com/Cp7FkmT.jpg",
-  "https://i.imgur.com/sFGQw1P.png",
-  "https://i.imgur.com/onglIwt.jpg",
-  "https://i.imgur.com/agTpgUS.jpg",
-  "https://i.imgur.com/wMCqa91.jpg"
+    "https://i.imgur.com/Cp7FkmT.jpg",
+    "https://i.imgur.com/sFGQw1P.png",
+    "https://i.imgur.com/onglIwt.jpg",
+    "https://i.imgur.com/agTpgUS.jpg",
+    "https://i.imgur.com/wMCqa91.jpg",
+    "https://i.imgur.com/PGjUB8I.jpg",
+    "https://i.imgur.com/43Nceww.png",
+    "https://i.imgur.com/xPJYqH3.jpg",
+    "https://i.imgur.com/wnamXOl.png,
+    "https://i.imgur.com/zwrQbpu.jpg",
+    "https://i.imgur.com/OGZ26Ai.jpg",
+    "https://i.imgur.com/NJUkaZO.png",
+    "https://i.imgur.com/nQ4f7Tj.png"
+
 ];
 
 //commands
