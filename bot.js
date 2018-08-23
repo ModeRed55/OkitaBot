@@ -36,7 +36,7 @@ client.on('ready', () =>
 
 
 //Array with sentences
-//relevant people used for circlejerkmemes
+//relevant people used for circlejerk
 var relevant =[
   "Pudding",
   "Mode",
@@ -47,7 +47,7 @@ var relevant =[
   "Sayaka",
   "KoO"
 ];
-//circlejerk memes
+//a circlejerk meme
 var meme = [
     "Can't believe **Mode** runs like Naruto IRL.",
     "Can't believe **Pudding** stole money from his mom for MHW.",
@@ -105,7 +105,7 @@ const randomtextgrail =[
                         "They summoned their Servant with Madness Enhancement.",
                         "They summoned their Servant with a human sacrifice."
                        ];
-//possible answers whe asking a question to okitabot
+//possible answers when asking a question to okitabot
 const answerball= [
                    "I agree.",
                    "Maybe" ,
@@ -114,7 +114,7 @@ const answerball= [
                    "No!",
                    "COUGH!"
 ];
-//% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck
+//% of chance to pull servant 2 = 5* 6 = 4* 40 = 3*, no 2* and 1* because they suck,not sure what the rates are tbh 
 const ratefgo =[2, 10, 40];
 //servant IDS,basically the ID on a specific servant in Cirnopedia
 //Cirnopedia ID for 5* servants
