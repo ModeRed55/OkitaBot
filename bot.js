@@ -225,9 +225,7 @@ var okitapic =[
               break;
 
         case "pudding":
-                              message.channel.send({
-                              files: ["https://i.imgur.com/P09qWTe.png"]
-                              });
+                              message.channel.send("<@134663132743204864> is a fucking Slut Master!, be careful");
               break;
              case "aniki":
                               message.channel.send({
