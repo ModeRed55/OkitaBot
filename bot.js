@@ -338,7 +338,7 @@ client.on('message', message =>
 client.on('message', message =>
 {
        if (message.author.bot) return;
-       if(message.content.startsWith('okitabot') && message.content.includes('?'))
+       if(message.content.startsWith('okitabot') || message.content.startsWith('Okitabot') && message.content.includes('?'))
        {
            var answer = answerball [Math.floor(Math.random()*answerball .length)];
           message.channel.send(answer);
