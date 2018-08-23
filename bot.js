@@ -214,7 +214,7 @@ var okitapic =[
 
         case "overkill":
                                message.channel.send({
-                               files: ["http://i.imgur.com/hljYGCE.png"]
+                               files: ["https://i.imgur.com/uvTsKfT.png"]
                                });
                    break;
 
@@ -227,6 +227,11 @@ var okitapic =[
         case "pudding":
                               message.channel.send({
                               files: ["https://i.imgur.com/P09qWTe.png"]
+                              });
+              break;
+             case "aniki":
+                              message.channel.send({
+                              files: ["https://29p3xo4710g84bygmn2df2g1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/trash.jpg"]
                               });
               break;
       default:
