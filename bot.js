@@ -107,8 +107,8 @@ const randomtextgrail =[
                        ];
 //possible answers when asking a question to okitabot
 const answerball= [
-                   "I agree.",
-                   "Maybe" ,
+                   "Yes!.",
+                   "Maybe." ,
                    "Umm... This is hard to say",
                    "I'll give you Okita-san's seal of approval!",
                    "No!",
