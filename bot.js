@@ -375,6 +375,14 @@ client.on('message', message =>
      }
 });
 
+client.on('message', message =>
+{
+  if(message.content.includes('Okita-san') || message.content.includes ('okita-san'))
+     {
+       message.reply("Daishouri!");
+     }
+});
+
 
 //Someone starts sentence with Overkill
 /*client.on('message', message =>
